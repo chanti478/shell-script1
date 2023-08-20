@@ -2,7 +2,10 @@
 
 echo "hello world i am learning devops"
 
-echo "ramesh: good afternoon"
-echo "karthik: good afternoon ramesh"
-echo "ramesh: how are you karthik"
-echo "karthik: i am good ramesh"
+person1=ramesh
+person2=karthik
+
+echo "$person1: good $person2  afternoon"
+echo "$person2: good afternoon $person1"
+echo "$person1: how are you $person2"
+echo "$person2: i am good $person1"
