@@ -20,3 +20,6 @@ do
 
     #we write our statment
 done <<< $FILES_TO_DELETE
+
+
+# gjdjjjjdj
