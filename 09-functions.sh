@@ -2,6 +2,8 @@
 
 # our program goal is to install mysql
 
+dATE=$(date +%F-%H-%M-%S)
+LOGFILE=/temp/
 USERID=$(id -u)
 
 # this function should validate the previous command if validate or not
