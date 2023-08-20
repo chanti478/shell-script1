@@ -1,5 +1,5 @@
 #!/bin/bash
-
+DATE=$(date +%F)
 USERID=$(id -u)
 
 R="\e[31m"
