@@ -24,9 +24,6 @@ fi
 
 USERID=$(id -u)
 
-
-
-
 if [ $USERID -ne 0 ]
 then 
     echo "ERROR:: please run this script with root access"
@@ -36,11 +33,11 @@ else
 
 fi
 # it is our responsibility again to check installation is success or failure
-yum install mysql -y &>>$LOGFILE
+yum install mysql -y
 
 VALIDATE $? "installing MYsql"
 
-yum install postfix -y &>>$LOGFILE
+yum install postfix -y
 
 VALIDATE $? "Installing Postfix"
 
