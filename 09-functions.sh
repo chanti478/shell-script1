@@ -2,9 +2,8 @@
 
 # our program goal is to install mysql
 
+DATE=$(date +%F)
 SCRIPT_NAME=$0
-
-dATE=$(date +%F-%H-%M-%S)
 LOGFILE=/temp/$SCRIPT_NAME-$DATE.log
 # this function should validate the previous command if validate or not
 
