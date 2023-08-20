@@ -13,4 +13,5 @@ else
 
 fi
 
-yum install git -y
+yum install mysql -y
+
