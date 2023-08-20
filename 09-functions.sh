@@ -2,10 +2,10 @@
 
 # our program goal is to install mysql
 
-dATE=$(date +%F-%H-%M-%S)
-LOGFILE=/temp/
-USERID=$(id -u)
+SCRIPT_NAME=$0
 
+dATE=$(date +%F-%H-%M-%S)
+LOGFILE=/temp/$SCRIPT_NAME-$DATE.log
 # this function should validate the previous command if validate or not
 
 VALIDATE(){
@@ -21,6 +21,11 @@ else
 fi
 }
 
+USERID=$(id -u)
+
+
+
+
 if [ $USERID -ne 0 ]
 then 
     echo "ERROR:: please run this script with root access"
@@ -30,11 +35,11 @@ else
 
 fi
 # it is our responsibility again to check installation is success or failure
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 
 VALIDATE $? "installing MYsql"
 
-yum install postfix -y
+yum install postfix -y &>>$LOGFILE
 
 VALIDATE $? "Installing Postfix"
 
