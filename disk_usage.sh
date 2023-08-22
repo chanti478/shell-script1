@@ -36,5 +36,4 @@ do
 done <<< $DISK_USAGE
 
 echo "message: $message"
-
-
+echo "please print message"
