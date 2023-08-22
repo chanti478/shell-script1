@@ -8,4 +8,11 @@ BODY=$3
 TEAM_NAME=$4
 ALERT_TYPE=$5
 
-echo "all args: $@" 
+FINAL_BODY=$('s/TEAM_NAME/DevOps Team/g' -e 's/ALERT_TYPE/High Disk Usage/g' -e "s/message/$BODY" templet.html
+
+
+
+
+#echo "all args: $@" 
+
+ echo "$FINAL_BODY" | mail -s "$SUBJECT" $TO_ADDRESS
