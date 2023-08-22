@@ -32,7 +32,6 @@ do
         message+="HIGH DISK USAGE ON $partition: $usage"
      fi
 
-
 done <<< $DISK_USAGE
 
 echo "message: $message"
