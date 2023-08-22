@@ -36,6 +36,6 @@ done <<< $DISK_USAGE
 
 echo -e "message: $message"
 
-echo "$message" | mail -s "HIGH DISK USAGE" info@joindevops.com
+echo "$message" | mail -s "HIGH DISK USAGE" chanti478mail@gmail.com
 
 
