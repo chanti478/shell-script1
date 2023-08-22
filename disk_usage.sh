@@ -16,7 +16,7 @@ N="\e[0m"
 Y="\e[33m"
 
 DISK_USAGE=$( df -hT | grep -vE 'tmpfs|filesystem')
-DISK_USAGE_THRESHOLD=1
+DISK_USAGE_THRESHOLD=1;
 message=""
 
 # IFS- means internal faild seperator is space
@@ -27,7 +27,7 @@ do
     # This command will give us partition
     partition=$(echo $line | awk '{print $1}')
     #now you need to check whether it is more than threshold or not
-    if [ $usage -gt: $DISK_USAGE_THRESHOLD ];
+    if [ $usage -gt $DISK_USAGE_THRESHOLD ];
     then
         message+="HIGH DISK USAGE ON $partition: $usage"
      fi
