@@ -16,14 +16,14 @@ N="\e[0m"
 Y="\e[33m"
 
 DISK_USAGE=$( df -hT | grep -vE 'tmpfs|filesystem')
-DISK_USAGE_THRESHOLD=1;
+DISK_USAGE_THRESHOLD=1
 message=""
 
 # IFS- means internal faild seperator is space
 while IFS= read line
 do
     # this command will give you usage in number format for comparision
-    USAGE=$(echo $line | awk '{print $6}' | cut -d % -f1)
+    usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
     # This command will give us partition
     partition=$(echo $line | awk '{print $1}')
     #now you need to check whether it is more than threshold or not
