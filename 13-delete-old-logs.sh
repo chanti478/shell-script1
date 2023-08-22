@@ -25,4 +25,4 @@ done <<< $FILES_TO_DELETE
 echo "$message" | mail -s "HIGH DISK USAGE" info@joindevops.com
 
 
-# gjdjj
+# 
